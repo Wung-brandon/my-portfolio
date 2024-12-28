@@ -1,35 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Import Fonts */
 @import "@fontsource/inter/400.css";
 @import "@fontsource/inter/700.css";
+
+/* Root Variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
-*{
+
+/* Reset Styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
+
+/* Utility Classes */
 body {
-  @apply bg-dark text-light;
-  font-family: "Inter", sans-serif;
-  height: 100vh;
-  /* width: 100%; */
-  
+  @apply bg-dark text-light h-screen;
+  font-family: 'Inter', sans-serif;
 }
 
+/* Heading Styling */
 h1, h2, h3 {
-  @apply font-sans;
-  
+  font-family: 'Inter', sans-serif; /* Avoid using @apply */
 }
 
+/* Link Transitions */
 a {
   @apply transition-transform duration-200 ease-in-out;
 }
 
+/* Button Transitions */
 button {
   @apply transition-transform duration-300 hover:scale-110;
 }

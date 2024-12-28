@@ -51,20 +51,25 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul
           className={`md:flex lg:flex-row gap-10 transition-all duration-300 absolute md:static top-20 left-0 w-full md:w-auto
-             bg-dark md:bg-transparent p-5 md:p-0 rounded-lg md:rounded-none shadow-lg md:shadow-none 
+            bg-dark md:bg-transparent p-5 md:p-0 rounded-lg md:rounded-none shadow-lg md:shadow-none 
           ${isMenuOpen ? "block" : "hidden"} md:flex md:justify-center md:gap-10 mt-16 md:mt-0`}
         >
-          {["Home", "About", "Services", "Contact"].map((link, index) => (
+          {[
+            { name: "Home", href: "/" },
+            { name: "About", href: "/about" },
+            { name: "Services", href: "/services" },
+            { name: "Contact", href: "/contact" },
+          ].map((link, index) => (
             <li key={index} className="text-center mb-4 md:mb-0">
               <Link
-                href="#"
+                href={link.href}
                 className={`relative transition-all duration-300 
                   hover:text-accent hover:scale-105 ease-in-out 
-                  ${link === "Home"
+                  ${link.name === "Home"
                     ? "text-accent font-bold underline underline-offset-4"
                     : "text-light"}`}
               >
-                {link}
+                {link.name}
                 <span
                   className="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 hover:w-full"
                 ></span>
@@ -73,10 +78,12 @@ const Navbar = () => {
           ))}
         </ul>
 
+
         {/* CTA Button */}
         <div className="hidden lg:block">
-          <button className="bg-gradient-to-r from-primary to-accent px-6 py-3 text-white font-semibold rounded-full 
-            hover:scale-105 transition-transform duration-300 ease-in-out shadow-lg flex items-center gap-2">
+          <button className="bg-gradient-to-r from-primary to-accent px-6 py-3 text-white font-semibold 
+          rounded-full hover:scale-105 transition-transform duration-300 ease-in-out shadow-lg flex items-center gap-2
+          animate-pulse">
             <span>Hire Me</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

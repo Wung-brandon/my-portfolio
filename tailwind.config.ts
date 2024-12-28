@@ -31,6 +31,16 @@ export default {
         glow: "0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(72, 187, 255, 0.6)", // Glowing shadow for cards and buttons
         soft: "0 2px 8px rgba(0, 0, 0, 0.1)", // Soft shadow for subtle depth
       },
+      keyframes: {
+        scaleInOut: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.1)' },
+        },
+      },
+      animation: {
+        scaleInOut: 'scaleInOut 2s infinite',
+      }
+
     },
   },
   plugins: [
