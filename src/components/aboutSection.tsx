@@ -14,7 +14,7 @@ function AboutMe() {
   return (
     <motion.div
       ref={myRef}
-      
+      id="about"
       className="text-foreground flex flex-col items-center lg:items-start px-10 py-16 mt-10"
     >
       <motion.h2

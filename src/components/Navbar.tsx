@@ -20,7 +20,7 @@ const Navbar = () => {
             className="border relative px-6 py-3 border-light rounded-full hover:bg-accent hover:text-dark transition-all 
             duration-300 hover:border-0 text-xl sm:text-2xl md:text-3xl"
           >
-            Wung Brandon
+            W.K
           </Link>
         </div>
 
@@ -55,14 +55,14 @@ const Navbar = () => {
           ${isMenuOpen ? "block" : "hidden"} md:flex md:justify-center md:gap-10 mt-16 md:mt-0`}
         >
           {[
-            { name: "Home", href: "/" },
-            { name: "About", href: "/about" },
-            { name: "Services", href: "/services" },
-            { name: "Contact", href: "/contact" },
+            { name: "Home"},
+            { name: "About"},
+            { name: "Services"},
+            { name: "Contact"},
           ].map((link, index) => (
             <li key={index} className="text-center mb-4 md:mb-0">
               <Link
-                href={link.href}
+                href="#"
                 className={`relative transition-all duration-300 
                   hover:text-accent hover:scale-105 ease-in-out 
                   ${link.name === "Home"
